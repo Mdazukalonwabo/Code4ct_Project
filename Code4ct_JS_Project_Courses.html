@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS_Project</title>
+
+<!--external css and javascript scripts linked here-->
+    <script src="Code4ct_Javascript\jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Code4ct_Javascript\Code4ct_JS_Project.js"></script>
+    <link type="text/css" rel="stylesheet" href="Code4ct_Css\Code4ct_Js_ProjectStyling.css">
+    <link href="https://fonts.googleapis.com/css?family=Helvetica|Arial|Lucida|sans-serif" rel="stylesheet">
+<!--ends-->
+  <style media="screen">
+/*class given a position and margin at the top with a solid border that has color and radius to smooth out edges and given a width, heading placed in the center*/
+    .CourseContainer{
+      position: relative;
+      margin-top: 100px;
+      border: 5px solid grey;
+      border-radius: 10%;
+      width: 800px;
+      left: 25%;
+    }
+
+    .CourseContainer h2{
+      text-align: center;
+    }
+/*ends*/
+/*class div floated to the left given a width, height and margin right/left and a solid black border text placed in the center
+headings also floated automated margin,padding removed and margin applied only to the left*/
+    .Introduction_courses div{
+      float: left;
+      width: 220px;
+      height: auto;
+      margin: 0 15px;
+      border: 2px solid black;
+      text-align: center;
+    }
+
+    .Introduction_courses div h4{
+      float: left;
+      margin: 0;
+      margin-left: 25px;
+      padding: 0;
+    }
+/*ends*/
+/*class given a height*/
+    .webpageContent{
+      height: 50px;
+    }
+/*ends*/
+/*the buttton tag given a width and height as well as automated margin*/
+    button{
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin: auto;
+    }
+/*ends*/
+  </style>
+
+  </head>
+  <body>
+<!-- container that holds that content within the website with four main sections-->
+    <div class="container">
+      <header>
+<!-- logo placed within a div as well as the navbar to all the other pages of the website placed within its own div within the header         -->
+        <div class="logo">
+          <img src="Code4ct_Images\code4ct-logo-1.jpg" alt="Code4ct_Logo" id="logoImage">
+        </div>
+        <div class="navbar">
+            <li><a href="Code4ct_JS_Project__Home.html">Home</a></li>
+            <li><a href="Code4ct_JS_Project_Courses.html">Courses</a></li>
+            <li><a href="Code4ct_JS_Project_About.html">About</a></li>
+            <li><a href="Code4ct_JS_Project_Portfolio.html">Portfolio</a></li>
+            <li><a href="Code4ct_JS_Project_Contact.html">Contact</a></li>
+        </div>
+<!--ends-->
+      </header>
+
+      <div class="CourseContainer" style="height: 250px">
+          <h2>Courses offered by CODE4CT</h2>
+          <div class="Introduction_courses">
+            <div class="Web_Page">
+              <h4 id="webpageHeading">asdasdasd</h4>
+              <button id="extraInformationWebpage"></button>
+              <div class="webpageContent">
+
+              </div>
+            </div>
+
+            <div class="Music">
+              <h4 id="musicHeading">asdasdasd</h4>
+              <button id="extraInformationMusic"></button>
+              <div class="musicContent">
+
+              </div>
+            </div>
+
+            <div class="Animation">
+              <h4 id="animationHeading">asdasdasdsa</h4>
+              <button id="extraInformationAnimation"></button>
+              <div class="animationContent">
+
+              </div>
+            </div>
+          </div>
+
+<!-- ends -->
+      </div>
+<!--ends-->
+
+    <script>
+
+      let introductoryCodingCourses = [
+            {Name : "Intro to Coding: Web Pages",Duration : "3 hours",Price : "250"},
+            {Name : "Intro to Coding: Music",Duration : "3 hours",Price : "250"},
+            {Name : "Create a 2D animation using coding ",Duration : "3 hours", Price : "250"}
+
+      ];
+
+      let BeginnerCodingCourses =[
+            {Name : "Create with Code: Web Pages",Duration : "3 days",Price : "R960"},
+            {Name : "Create with Code: Music",Duration : "3 days",Price : "R960"},
+            {Name : "Create with Code: Animation ",Duration : "3 days", Price : "R960"}
+
+      ];
+
+      const wp = document.getElementsByClassName('webpageContent').innerHTML;
+      const msc = document.getElementsByClassName('musicContent').innerHTML;
+      const anm = document.getElementsByClassName('animationContent').innerHTML;
+
+      document.getElementById('extraInformationWebpage').onclick = function(){
+        wp = introductoryCodingCourses[1];
+      }
+
+      document.getElementById('extraInformationMusic').onclick = function(){
+        msc = introductoryCodingCourses.name;
+      }
+
+      document.getElementById('extraInformationAnimation').onclick = function(){
+        anm = introductoryCodingCourses[3];
+      }
+
+
+    </script>
+  </body>
+</html>
